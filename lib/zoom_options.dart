@@ -29,8 +29,8 @@ class ZoomMeetingOptions {
   String noDisconnectAudio;
   String noAudio;
   String noTitle;
-  // String noPassword;
-  // String noChat;
+  String noChat;
+  String noParticipent;
 
   ZoomMeetingOptions({
     this.userId,
@@ -46,7 +46,7 @@ class ZoomMeetingOptions {
     this.noDisconnectAudio,
     this.noAudio,
     this.noTitle,
-    // this.noPassword,
-    // this.noChat,
+    this.noChat,
+    this.noParticipent,
   });
 }
