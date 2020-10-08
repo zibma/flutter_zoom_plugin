@@ -104,6 +104,9 @@ class ZoomViewController {
     optionMap.putIfAbsent("disableShare", () => options.disableShare);
     optionMap.putIfAbsent("noDisconnectAudio", () => options.noDisconnectAudio);
     optionMap.putIfAbsent("noAudio", () => options.noAudio);
+    optionMap.putIfAbsent("noTitle", () => options.noTitle);
+    optionMap.putIfAbsent("noPassword", () => options.noPassword);
+    optionMap.putIfAbsent("noChat", () => options.noChat);
 
     return _methodChannel.invokeMethod('join', optionMap);
   }
