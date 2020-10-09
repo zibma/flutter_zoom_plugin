@@ -31,6 +31,7 @@ class ZoomMeetingOptions {
   String noTitle;
   String noChat;
   String noParticipent;
+  String noMore;
 
   ZoomMeetingOptions({
     this.userId,
@@ -48,5 +49,6 @@ class ZoomMeetingOptions {
     this.noTitle,
     this.noChat,
     this.noParticipent,
+    this.noMore
   });
 }
