@@ -30,7 +30,8 @@ class StartMeetingWidget extends StatelessWidget {
         disableInvite: "true",
         disableShare: "true",
         noAudio: "false",
-        noDisconnectAudio: "false"
+        noDisconnectAudio: "false",
+        waitingRoom: "false",
     );
   }
 
