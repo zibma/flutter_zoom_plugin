@@ -33,7 +33,6 @@ class MeetingWidget extends StatelessWidget {
         noChat: "true",
         noParticipent: "true",
         noMore: "false",
-        waitingRoom: "false",
     );
   }
 

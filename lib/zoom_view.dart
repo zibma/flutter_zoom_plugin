@@ -88,7 +88,6 @@ class ZoomViewController {
     optionMap.putIfAbsent("disableShare", () => options.disableShare);
     optionMap.putIfAbsent("noDisconnectAudio", () => options.noDisconnectAudio);
     optionMap.putIfAbsent("noAudio", () => options.noAudio);
-    optionMap.putIfAbsent("waitingRoom", () => options.waitingRoom);
 
     return _methodChannel.invokeMethod('start', optionMap);
   }
@@ -109,7 +108,6 @@ class ZoomViewController {
     optionMap.putIfAbsent("noChat", () => options.noChat);
     optionMap.putIfAbsent("noParticipent", () => options.noParticipent);
     optionMap.putIfAbsent("noMore", () => options.noMore);
-    optionMap.putIfAbsent("waitingRoom", () => options.waitingRoom);
 
     return _methodChannel.invokeMethod('join', optionMap);
   }
