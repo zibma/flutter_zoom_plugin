@@ -108,6 +108,7 @@ class ZoomViewController {
     optionMap.putIfAbsent("noChat", () => options.noChat);
     optionMap.putIfAbsent("noParticipent", () => options.noParticipent);
     optionMap.putIfAbsent("noMore", () => options.noMore);
+    optionMap.putIfAbsent("waitingRoom", () => options.waitingRoom);
 
     return _methodChannel.invokeMethod('join', optionMap);
   }
