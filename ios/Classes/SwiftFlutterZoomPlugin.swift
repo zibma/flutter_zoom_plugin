@@ -300,6 +300,9 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
+            meetingSettings?.meetingTitleHidden = parseBoolean(data: arguments["noTitle"]!, defaultValue: false)
+            meetingSettings?.meetingParticipantHidden = parseBoolean(data: arguments["noParticipant"]!, defaultValue: false)
+            meetingSettings?.meetingMoreHidden = parseBoolean(data: arguments["noMore"]!, defaultValue: false)
 
             let user: MobileRTCMeetingStartParam4WithoutLoginUser = MobileRTCMeetingStartParam4WithoutLoginUser.init()
             
