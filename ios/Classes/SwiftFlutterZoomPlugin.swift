@@ -192,9 +192,9 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
     }
     
     public func view() -> UIView {
-
+        
         let label = UILabel(frame: frame)
-        label.text = ""
+        label.text = "Zoom"
         return label
     }
     
@@ -260,11 +260,7 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
             meetingSettings?.setMuteAudioWhenJoinMeeting(parseBoolean(data: arguments["noAudio"]!, defaultValue: false))
             meetingSettings?.meetingShareHidden = parseBoolean(data: arguments["disableShare"]!, defaultValue: false)
             meetingSettings?.meetingInviteHidden = parseBoolean(data: arguments["disableDrive"]!, defaultValue: false)
-            meetingSettings?.meetingTitleHidden = parseBoolean(data: arguments["noTitle"]!, defaultValue: false)
-            meetingSettings?.meetingChatHidden = parseBoolean(data: arguments["noChat"]!, defaultValue: false)
-            meetingSettings?.meetingParticipantHidden = parseBoolean(data: arguments["noParticipent"]!, defaultValue: false)
-            meetingSettings?.meetingMoreHidden = parseBoolean(data: arguments["noMore"]!, defaultValue: false)
-
+       
             var params = [
                 kMeetingParam_Username: arguments["userId"]!!,
                 kMeetingParam_MeetingNumber: arguments["meetingId"]!!
