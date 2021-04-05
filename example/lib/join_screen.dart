@@ -14,7 +14,15 @@ class _JoinWidgetState extends State<JoinWidget> {
 
   TextEditingController meetingIdController = TextEditingController();
   TextEditingController meetingPasswordController = TextEditingController();
+  String MeetingId = '9927947394';
+  String Password = 'virendra1994';
 
+  @override
+  void initState() {
+     super.initState();
+     meetingIdController.text=MeetingId;
+     meetingPasswordController.text=Password;
+  }
   @override
   Widget build(BuildContext context) {
     // new page needs scaffolding!

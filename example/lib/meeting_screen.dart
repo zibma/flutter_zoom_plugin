@@ -13,11 +13,14 @@ class MeetingWidget extends StatelessWidget {
 
   Timer timer;
 
+  String SDKKey = 'jJbXtCPPsbt3KpaPMqkCgL7t0zWoHwsKb98k';
+  String SDKSecret = 'qmo84JZAg24dguzikPZX49QwajdhpxBiYtu3';
+
   MeetingWidget({Key key, meetingId, meetingPassword}) : super(key: key) {
     this.zoomOptions = new ZoomOptions(
       domain: "zoom.us",
-      appKey: "appKey",
-      appSecret: "appSecret",
+      appKey: SDKKey,
+      appSecret: SDKSecret,
     );
     this.meetingOptions = new ZoomMeetingOptions(
         userId: 'example',

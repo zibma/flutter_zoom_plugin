@@ -13,17 +13,24 @@ class StartMeetingWidget extends StatelessWidget {
 
   Timer timer;
 
+  String SDKKey = 'jJbXtCPPsbt3KpaPMqkCgL7t0zWoHwsKb98k';
+  String SDKSecret = 'qmo84JZAg24dguzikPZX49QwajdhpxBiYtu3';
+  String Username = 'viren@zibma.com';
+  String zoomAccessToken_ZAK = 'eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiJhX05VV0JMTlNYNlBUOU1GbmVBYVh3IiwiaXNzIjoid2ViIiwic3R5IjoxMDAsIndjZCI6ImF3MSIsImNsdCI6MCwic3RrIjoiLUJuN1VORVYwejc3VEpYekRTbTJJMUtFbDMyWThPM1ViWGNWWHhkbjNnOC5CZ1lZY0d4R1RqbHBSbmQxTkRSSmFDdFVjR1IyZVZCS1VUMDlRREkzWWpreU1EQmlNVEZoWVRCa1l6TTVOREJtWlRCaFl6RXlZVEptTW1NeU1tRm1OV1F6Tm1WaVpHSXdZMlppWW1ObVlUQmpPV1ZqWkRka05XSXlaamtBRERORFFrRjFiMmxaVXpOelBRQURZWGN4QUFBQmVLQmpPUU1BRW5VQUFBQSIsImV4cCI6MTYxNzYwNTc2MCwiaWF0IjoxNjE3NTk4NTYwLCJhaWQiOiJONF9QdFZtVlRoYUJ1TUt4OFFVZEx3IiwiY2lkIjoiIn0.poVtGwe0JwK6QHpmfzb-F-wpQnlD5BJKqViiTbZ8xUs';
+  String displayName = 'Android';
+
+
   StartMeetingWidget({Key key, meetingId}) : super(key: key) {
     this.zoomOptions = new ZoomOptions(
       domain: "zoom.us",
-      appKey: "appKey",
-      appSecret: "appSecret",
+      appKey: SDKKey,
+      appSecret: SDKSecret,
     );
     this.meetingOptions = new ZoomMeetingOptions(
-        userId: '<zoom_user_id>',
-        displayName: 'Example display Name',
+        userId: Username,
+        displayName: 'Rajnik',
         meetingId: meetingId,
-        zoomAccessToken: "<User zak>",
+        zoomAccessToken: zoomAccessToken_ZAK,
         zoomToken: "<user_token>",
         disableDialIn: "true",
         disableDrive: "true",
