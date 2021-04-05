@@ -129,12 +129,28 @@ public class ZoomView  implements PlatformView,
         final MeetingService meetingService = zoomSDK.getMeetingService();
 
         JoinMeetingOptions opts = new JoinMeetingOptions();
-        opts.no_invite = parseBoolean(options, "disableInvite", false);
-        opts.no_share = parseBoolean(options, "disableShare", false);
-        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
-        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
-        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
-        opts.no_audio = parseBoolean(options, "noAudio", false);
+//        opts.no_invite = parseBoolean(options, "disableInvite", false);
+//        opts.no_share = parseBoolean(options, "disableShare", false);
+//        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
+//        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
+//        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
+//        opts.no_audio = parseBoolean(options, "noAudio", false);
+
+        opts.invite_options = InviteOptions.INVITE_DISABLE_ALL;
+        opts.no_invite = true;
+        opts.no_meeting_end_message = true;
+        opts.meeting_views_options = 104;
+        opts.no_titlebar = false;
+        opts.no_dial_in_via_phone = true;
+        opts.no_dial_out_to_phone = true;
+
+//        invite_options: >>0
+//        no_invite: >>true
+//        no_meeting_end_message: >>true
+//        meeting_views_options: >>104
+//        no_titlebar: >>false
+//        no_dial_in_via_phone: >>true
+//        no_dial_out_to_phone: >>true
 
         JoinMeetingParams params = new JoinMeetingParams();
 
@@ -162,12 +178,45 @@ public class ZoomView  implements PlatformView,
         final MeetingService meetingService = zoomSDK.getMeetingService();
 
         StartMeetingOptions opts = new StartMeetingOptions();
-        opts.no_invite = parseBoolean(options, "disableInvite", false);
-        opts.no_share = parseBoolean(options, "disableShare", false);
-        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
-        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
-        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
-        opts.no_audio = parseBoolean(options, "noAudio", false);
+//        opts.no_invite = parseBoolean(options, "disableInvite", false);
+//        opts.no_share = parseBoolean(options, "disableShare", false);
+//        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
+//        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
+//        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
+//        opts.no_audio = parseBoolean(options, "noAudio", false);
+
+
+        opts.no_driving_mode = false;
+        opts.no_invite = false;
+        opts.no_meeting_end_message = false;
+        opts.no_titlebar = false;
+        opts.no_bottom_toolbar = false;
+        opts.no_dial_in_via_phone = false;
+        opts.no_dial_out_to_phone = false;
+        opts.no_disconnect_audio = false;
+        opts.no_share = false;
+        opts.invite_options = 255;
+        opts.no_video = false;
+        opts.meeting_views_options = 0;
+        opts.no_meeting_error_message = false;
+        opts.participant_id = null;
+
+//        no_driving_mode: >>false
+//        no_invite: >>false
+//        no_meeting_end_message: >>false
+//        no_titlebar: >>false
+//        no_bottom_toolbar: >>false
+//        no_dial_in_via_phone: >>false
+//        no_dial_out_to_phone: >>false
+//        no_disconnect_audio: >>false
+//        no_share: >>false
+//        invite_options: >>255
+//        no_video: >>false
+//        meeting_views_options: >>0
+//        no_meeting_error_mess: >>false
+//        participant_id: >>null
+
+
 
         StartMeetingParamsWithoutLogin params = new StartMeetingParamsWithoutLogin();
 
