@@ -24,18 +24,16 @@ class MeetingWidget extends StatelessWidget {
         userId: 'example',
         meetingId: meetingId,
         meetingPassword: meetingPassword,
-        disableDialIn: "true",
-        disableDrive: "true",
-        disableInvite: "true",
-        disableShare: "true",
-        noAudio: "false",
-        noDisconnectAudio: "false",
         displayName: 'example',
-        noMore: '',
-        noParticipant: '',
-        noTitle: '',
         zoomAccessToken: '',
-        zoomToken: '');
+        zoomToken: '',
+        noInvite: 'true',
+        noMeetingEndMessage: 'true',
+        meetingViewsOptions: '104',
+        noTitleBar: "false",
+        noDialOutToPhone: 'true',
+        noDialInViaPhone: 'true',
+      );
   }
 
   bool _isMeetingEnded(String status) {

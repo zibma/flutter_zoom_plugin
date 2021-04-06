@@ -22,15 +22,13 @@ class ZoomMeetingOptions {
   String? meetingPassword;
   String? zoomToken;
   String? zoomAccessToken;
-  String? disableDialIn;
-  String? disableDrive;
-  String? disableInvite;
-  String? disableShare;
-  String? noDisconnectAudio;
-  String? noAudio;
-  String? noTitle;
-  String? noParticipant;
-  String? noMore;
+  String? noInvite;
+  String? noMeetingEndMessage;
+  String? meetingViewsOptions;
+  String? noTitleBar;
+  String? noDialInViaPhone;
+  String? noDialOutToPhone;
+
 
   ZoomMeetingOptions({
     this.userId,
@@ -39,14 +37,12 @@ class ZoomMeetingOptions {
     this.meetingPassword,
     this.zoomToken,
     this.zoomAccessToken,
-    this.disableDialIn,
-    this.disableDrive,
-    this.disableInvite,
-    this.disableShare,
-    this.noDisconnectAudio,
-    this.noAudio,
-    this.noTitle,
-    this.noParticipant,
-    this.noMore,
+    this.noInvite,
+    this.noMeetingEndMessage,
+    this.meetingViewsOptions,
+    this.noTitleBar,
+    this.noDialInViaPhone,
+    this.noDialOutToPhone,
+
   });
 }

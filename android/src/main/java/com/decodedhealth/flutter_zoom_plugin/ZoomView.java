@@ -8,7 +8,6 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
-import io.flutter.Log;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
@@ -27,8 +26,7 @@ import us.zoom.sdk.ZoomSDKAuthenticationListener;
 import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
 
-public class ZoomView implements PlatformView,
-        MethodChannel.MethodCallHandler,
+public class ZoomView implements PlatformView, MethodChannel.MethodCallHandler,
         ZoomSDKAuthenticationListener {
     private final TextView textView;
     private final MethodChannel methodChannel;
@@ -119,9 +117,7 @@ public class ZoomView implements PlatformView,
     private void joinMeeting(MethodCall methodCall, MethodChannel.Result result) {
 
         Map<String, String> options = methodCall.arguments();
-
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
-
         if (!zoomSDK.isInitialized()) {
             System.out.println("Not initialized!!!!!!");
             result.success(false);
@@ -131,34 +127,15 @@ public class ZoomView implements PlatformView,
         final MeetingService meetingService = zoomSDK.getMeetingService();
 
         JoinMeetingOptions opts = new JoinMeetingOptions();
-//        opts.no_invite = parseBoolean(options, "disableInvite", false);
-//        opts.no_share = parseBoolean(options, "disableShare", false);
-//        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
-//        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
-//        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
-//        opts.no_audio = parseBoolean(options, "noAudio", false);
-
         opts.invite_options = InviteOptions.INVITE_DISABLE_ALL;
-        opts.no_invite = true;
-        opts.no_meeting_end_message = true;
-        opts.meeting_views_options = 104;
-        opts.no_titlebar = false;
-        opts.no_dial_in_via_phone = true;
-        opts.no_dial_out_to_phone = true;
-
-//        invite_options: >>0
-//        no_invite: >>true
-//        no_meeting_end_message: >>true
-//        meeting_views_options: >>104
-//        no_titlebar: >>false
-//        no_dial_in_via_phone: >>true
-//        no_dial_out_to_phone: >>true
+        opts.no_invite = parseBoolean(options, "noInvite", false);
+        opts.no_meeting_end_message = parseBoolean(options, "noMeetingEndMessage", false);
+        opts.meeting_views_options = parseInt(options, "meetingViewsOptions", 0);
+        opts.no_titlebar = parseBoolean(options, "noTitleBar", false);
+        opts.no_dial_in_via_phone = parseBoolean(options, "noDialInViaPhone", false);
+        opts.no_dial_out_to_phone = parseBoolean(options, "noDialOutToPhone", false);
 
         JoinMeetingParams params = new JoinMeetingParams();
-
-        Log.e("displayName",""+options.get("displayName"));
-        Log.e("meetingId",""+options.get("meetingId"));
-        Log.e("meetingPassword",""+options.get("meetingPassword"));
         params.displayName = options.get("displayName");
         params.meetingNo = options.get("meetingId");
         params.password = options.get("meetingPassword");
@@ -183,14 +160,6 @@ public class ZoomView implements PlatformView,
         final MeetingService meetingService = zoomSDK.getMeetingService();
 
         StartMeetingOptions opts = new StartMeetingOptions();
-//        opts.no_invite = parseBoolean(options, "disableInvite", false);
-//        opts.no_share = parseBoolean(options, "disableShare", false);
-//        opts.no_driving_mode = parseBoolean(options, "disableDrive", false);
-//        opts.no_dial_in_via_phone = parseBoolean(options, "disableDialIn", false);
-//        opts.no_disconnect_audio = parseBoolean(options, "noDisconnectAudio", false);
-//        opts.no_audio = parseBoolean(options, "noAudio", false);
-
-
         opts.no_driving_mode = false;
         opts.no_invite = false;
         opts.no_meeting_end_message = false;
@@ -204,26 +173,9 @@ public class ZoomView implements PlatformView,
         opts.no_video = false;
         opts.meeting_views_options = 0;
         opts.no_meeting_error_message = false;
-        opts.participant_id = null;
-
-//        no_driving_mode: >>false
-//        no_invite: >>false
-//        no_meeting_end_message: >>false
-//        no_titlebar: >>false
-//        no_bottom_toolbar: >>false
-//        no_dial_in_via_phone: >>false
-//        no_dial_out_to_phone: >>false
-//        no_disconnect_audio: >>false
-//        no_share: >>false
-//        invite_options: >>255
-//        no_video: >>false
-//        meeting_views_options: >>0
-//        no_meeting_error_mess: >>false
-//        participant_id: >>null
 
 
         StartMeetingParamsWithoutLogin params = new StartMeetingParamsWithoutLogin();
-
         params.userId = options.get("userId");
         params.displayName = options.get("displayName");
         params.meetingNo = options.get("meetingId");
@@ -240,6 +192,9 @@ public class ZoomView implements PlatformView,
         return options.get(property) == null ? defaultValue : Boolean.parseBoolean(options.get(property));
     }
 
+    private int parseInt(Map<String, String> options, String property, int defaultValue) {
+        return options.get(property) == null ? defaultValue : Integer.parseInt(options.get(property));
+    }
 
     private void meetingStatus(MethodChannel.Result result) {
 

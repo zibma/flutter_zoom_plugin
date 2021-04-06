@@ -82,16 +82,16 @@ class ZoomViewController {
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
     optionMap.putIfAbsent("zoomToken", () => options.zoomToken!);
     optionMap.putIfAbsent("zoomAccessToken", () => options.zoomAccessToken!);
-    optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn!);
-    optionMap.putIfAbsent("disableDrive", () => options.disableDrive!);
-    optionMap.putIfAbsent("disableInvite", () => options.disableInvite!);
-    optionMap.putIfAbsent("disableShare", () => options.disableShare!);
-    optionMap.putIfAbsent(
-        "noDisconnectAudio", () => options.noDisconnectAudio!);
-    optionMap.putIfAbsent("noAudio", () => options.noAudio!);
-    optionMap.putIfAbsent("noTitle", () => options.noTitle!);
-    optionMap.putIfAbsent("noParticipant", () => options.noParticipant!);
-    optionMap.putIfAbsent("noMore", () => options.noMore!);
+    // optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn!);
+    // optionMap.putIfAbsent("disableDrive", () => options.disableDrive!);
+    // optionMap.putIfAbsent("disableInvite", () => options.disableInvite!);
+    // optionMap.putIfAbsent("disableShare", () => options.disableShare!);
+    // optionMap.putIfAbsent(
+    //     "noDisconnectAudio", () => options.noDisconnectAudio!);
+    // optionMap.putIfAbsent("noAudio", () => options.noAudio!);
+    // optionMap.putIfAbsent("noTitle", () => options.noTitle!);
+    // optionMap.putIfAbsent("noParticipant", () => options.noParticipant!);
+    // optionMap.putIfAbsent("noMore", () => options.noMore!);
 
     return _methodChannel.invokeMethod('start', optionMap);
   }
@@ -103,16 +103,19 @@ class ZoomViewController {
     optionMap.putIfAbsent("displayName", () => options.displayName!);
     optionMap.putIfAbsent("meetingId", () => options.meetingId!);
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
-    optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn!);
-    optionMap.putIfAbsent("disableDrive", () => options.disableDrive!);
-    optionMap.putIfAbsent("disableInvite", () => options.disableInvite!);
-    optionMap.putIfAbsent("disableShare", () => options.disableShare!);
-    optionMap.putIfAbsent(
-        "noDisconnectAudio", () => options.noDisconnectAudio!);
-    optionMap.putIfAbsent("noAudio", () => options.noAudio!);
-    optionMap.putIfAbsent("noTitle", () => options.noTitle!);
-    optionMap.putIfAbsent("noParticipant", () => options.noParticipant!);
-    optionMap.putIfAbsent("noMore", () => options.noMore!);
+    optionMap.putIfAbsent("noInvite", () => options.noInvite!);
+    optionMap.putIfAbsent("noMeetingEndMessage", () => options.noMeetingEndMessage!);
+    optionMap.putIfAbsent("meetingViewsOptions", () => options.meetingViewsOptions!);
+    optionMap.putIfAbsent("noTitleBar", () => options.noTitleBar!);
+    optionMap.putIfAbsent("noDialOutToPhone", () => options.noDialOutToPhone!);
+    optionMap.putIfAbsent("noDialInViaPhone", () => options.noDialInViaPhone!);
+    // optionMap.putIfAbsent("disableShare", () => options.disableShare!);
+    // optionMap.putIfAbsent(
+    //     "noDisconnectAudio", () => options.noDisconnectAudio!);
+    // optionMap.putIfAbsent("noAudio", () => options.noAudio!);
+    // optionMap.putIfAbsent("noTitle", () => options.noTitle!);
+    // optionMap.putIfAbsent("noParticipant", () => options.noParticipant!);
+    // optionMap.putIfAbsent("noMore", () => options.noMore!);
 
     return _methodChannel.invokeMethod('join', optionMap);
   }
