@@ -16,17 +16,17 @@ import io.flutter.plugin.platform.PlatformView;
 import us.zoom.sdk.InviteOptions;
 import us.zoom.sdk.JoinMeetingOptions;
 import us.zoom.sdk.JoinMeetingParams;
-import us.zoom.sdk.StartMeetingParamsWithoutLogin;
-import us.zoom.sdk.StartMeetingOptions;
 import us.zoom.sdk.MeetingService;
 import us.zoom.sdk.MeetingStatus;
+import us.zoom.sdk.StartMeetingOptions;
+import us.zoom.sdk.StartMeetingParamsWithoutLogin;
 import us.zoom.sdk.ZoomError;
 import us.zoom.sdk.ZoomSDK;
 import us.zoom.sdk.ZoomSDKAuthenticationListener;
 import us.zoom.sdk.ZoomSDKInitParams;
 import us.zoom.sdk.ZoomSDKInitializeListener;
 
-public class ZoomView  implements PlatformView,
+public class ZoomView implements PlatformView,
         MethodChannel.MethodCallHandler,
         ZoomSDKAuthenticationListener {
     private final TextView textView;
@@ -76,7 +76,7 @@ public class ZoomView  implements PlatformView,
 
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
-        if(zoomSDK.isInitialized()) {
+        if (zoomSDK.isInitialized()) {
             List<Integer> response = Arrays.asList(0, 0);
             result.success(response);
             return;
@@ -121,7 +121,7 @@ public class ZoomView  implements PlatformView,
 
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
-        if(!zoomSDK.isInitialized()) {
+        if (!zoomSDK.isInitialized()) {
             System.out.println("Not initialized!!!!!!");
             result.success(false);
             return;
@@ -155,7 +155,7 @@ public class ZoomView  implements PlatformView,
 
         JoinMeetingParams params = new JoinMeetingParams();
 
-        params.displayName = options.get("userId");
+        params.displayName = options.get("displayName");
         params.meetingNo = options.get("meetingId");
         params.password = options.get("meetingPassword");
 
@@ -170,7 +170,7 @@ public class ZoomView  implements PlatformView,
 
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
-        if(!zoomSDK.isInitialized()) {
+        if (!zoomSDK.isInitialized()) {
             System.out.println("Not initialized!!!!!!");
             result.success(false);
             return;
@@ -218,16 +218,15 @@ public class ZoomView  implements PlatformView,
 //        participant_id: >>null
 
 
-
         StartMeetingParamsWithoutLogin params = new StartMeetingParamsWithoutLogin();
 
-		params.userId = options.get("userId");
+        params.userId = options.get("userId");
         params.displayName = options.get("displayName");
         params.meetingNo = options.get("meetingId");
-		params.userType = MeetingService.USER_TYPE_API_USER;
- 		params.zoomToken = options.get("zoomToken");
-		params.zoomAccessToken = options.get("zoomAccessToken");
-		
+        params.userType = MeetingService.USER_TYPE_API_USER;
+        params.zoomToken = options.get("zoomToken");
+        params.zoomAccessToken = options.get("zoomAccessToken");
+
         meetingService.startMeetingWithParams(context, params, opts);
 
         result.success(true);
@@ -242,7 +241,7 @@ public class ZoomView  implements PlatformView,
 
         ZoomSDK zoomSDK = ZoomSDK.getInstance();
 
-        if(!zoomSDK.isInitialized()) {
+        if (!zoomSDK.isInitialized()) {
             System.out.println("Not initialized!!!!!!");
             result.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "SDK not initialized"));
             return;
@@ -250,17 +249,18 @@ public class ZoomView  implements PlatformView,
 
         MeetingService meetingService = zoomSDK.getMeetingService();
 
-        if(meetingService == null) {
+        if (meetingService == null) {
             result.success(Arrays.asList("MEETING_STATUS_UNKNOWN", "No status available"));
             return;
         }
 
         MeetingStatus status = meetingService.getMeetingStatus();
-        result.success(status != null ? Arrays.asList(status.name(), "") :  Arrays.asList("MEETING_STATUS_UNKNOWN", "No status available"));
+        result.success(status != null ? Arrays.asList(status.name(), "") : Arrays.asList("MEETING_STATUS_UNKNOWN", "No status available"));
     }
 
     @Override
-    public void dispose() {}
+    public void dispose() {
+    }
 
     @Override
     public void onZoomAuthIdentityExpired() {
