@@ -13,7 +13,7 @@ class MeetingWidget extends StatelessWidget {
 
   String SDKKey = 'jJbXtCPPsbt3KpaPMqkCgL7t0zWoHwsKb98k';
   String SDKSecret = 'qmo84JZAg24dguzikPZX49QwajdhpxBiYtu3';
-  String Username = 'viren@zibma.com';
+
   MeetingWidget({Key? key, meetingId, meetingPassword}) : super(key: key) {
     this.zoomOptions = new ZoomOptions(
       domain: "zoom.us",
@@ -21,8 +21,7 @@ class MeetingWidget extends StatelessWidget {
       appSecret: SDKSecret,
     );
     this.meetingOptions = new ZoomMeetingOptions(
-      userId: Username,
-        displayName: 'example',
+        userId: 'example',
         meetingId: meetingId,
         meetingPassword: meetingPassword,
         disableDialIn: "true",
@@ -31,7 +30,8 @@ class MeetingWidget extends StatelessWidget {
         disableShare: "true",
         noAudio: "false",
         noDisconnectAudio: "false",
-         noMore: '',
+        displayName: '',
+        noMore: '',
         noParticipant: '',
         noTitle: '',
         zoomAccessToken: '',

@@ -8,6 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 
+import io.flutter.Log;
 import io.flutter.plugin.common.BinaryMessenger;
 import io.flutter.plugin.common.EventChannel;
 import io.flutter.plugin.common.MethodCall;
@@ -155,7 +156,10 @@ public class ZoomView implements PlatformView,
 
         JoinMeetingParams params = new JoinMeetingParams();
 
-        params.displayName = options.get("displayName");
+        Log.e("userId",""+options.get("userId"));
+        Log.e("meetingId",""+options.get("meetingId"));
+        Log.e("meetingPassword",""+options.get("meetingPassword"));
+        params.displayName = options.get("userId");
         params.meetingNo = options.get("meetingId");
         params.password = options.get("meetingPassword");
 
