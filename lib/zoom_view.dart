@@ -100,6 +100,7 @@ class ZoomViewController {
     assert(options != null);
     var optionMap = new Map<String, String>();
     optionMap.putIfAbsent("userId", () => options.userId!);
+    optionMap.putIfAbsent("displayName", () => options.displayName!);
     optionMap.putIfAbsent("meetingId", () => options.meetingId!);
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn!);

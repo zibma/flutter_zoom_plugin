@@ -156,10 +156,10 @@ public class ZoomView implements PlatformView,
 
         JoinMeetingParams params = new JoinMeetingParams();
 
-        Log.e("userId",""+options.get("userId"));
+        Log.e("displayName",""+options.get("displayName"));
         Log.e("meetingId",""+options.get("meetingId"));
         Log.e("meetingPassword",""+options.get("meetingPassword"));
-        params.displayName = options.get("userId");
+        params.displayName = options.get("displayName");
         params.meetingNo = options.get("meetingId");
         params.password = options.get("meetingPassword");
 

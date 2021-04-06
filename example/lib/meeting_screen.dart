@@ -30,7 +30,7 @@ class MeetingWidget extends StatelessWidget {
         disableShare: "true",
         noAudio: "false",
         noDisconnectAudio: "false",
-        displayName: '',
+        displayName: 'example',
         noMore: '',
         noParticipant: '',
         noTitle: '',
