@@ -1073,7 +1073,6 @@ androidx.core.R$style
 androidx.viewpager.R$styleable
 io.flutter.embedding.engine.loader.FlutterLoader
     public static io.flutter.embedding.engine.loader.FlutterLoader getInstance()
-    private java.lang.String fullAssetPathFrom(java.lang.String)
     public void ensureInitializationCompleteAsync(android.content.Context,java.lang.String[],android.os.Handler,java.lang.Runnable)
     public boolean initialized()
     public java.lang.String getLookupKeyForAsset(java.lang.String)
@@ -2212,24 +2211,7 @@ us.google.protobuf.Internal$EnumLite
     public abstract int getNumber()
 androidx.transition.CircularPropagation
 io.flutter.embedding.engine.loader.ResourceExtractor
-    static long getVersionCode(android.content.pm.PackageInfo)
-    void <init>(java.lang.String,java.lang.String,android.content.pm.PackageManager,android.content.res.AssetManager)
-    private static java.lang.String[] getExistingTimestamps(java.io.File)
-    private static void deleteFiles(java.lang.String,java.util.HashSet)
-    private static java.lang.String checkTimestamp(java.io.File,android.content.pm.PackageManager,java.lang.String)
-    private static void copy(java.io.InputStream,java.io.OutputStream)
-    static synthetic java.lang.String access$000(java.io.File,android.content.pm.PackageManager,java.lang.String)
-    static synthetic void access$100(java.lang.String,java.util.HashSet)
-    static synthetic void access$200(java.io.InputStream,java.io.OutputStream)
-    io.flutter.embedding.engine.loader.ResourceExtractor addResource(java.lang.String)
     io.flutter.embedding.engine.loader.ResourceExtractor addResources(java.util.Collection)
-    io.flutter.embedding.engine.loader.ResourceExtractor start()
-    private final java.lang.String mDataDirPath
-    private final java.lang.String mPackageName
-    private final android.content.pm.PackageManager mPackageManager
-    private final android.content.res.AssetManager mAssetManager
-    private final java.util.HashSet mResources
-    private io.flutter.embedding.engine.loader.ResourceExtractor$ExtractTask mExtractTask
     private static final java.lang.String TAG
     private static final java.lang.String TIMESTAMP_PREFIX
 androidx.transition.ViewGroupOverlayApi18
@@ -3076,7 +3058,6 @@ androidx.swiperefreshlayout.widget.CircularProgressDrawable
     private static final float MAX_PROGRESS_ARC
     private static final float MIN_PROGRESS_ARC
     private static final float RING_ROTATION
-io.flutter.embedding.engine.loader.ResourceExtractor$ExtractTask
 androidx.core.app.NotificationCompat$BadgeIconType
 androidx.recyclerview.widget.MessageThreadUtil$SyncQueueItem
 com.revolverobotics.kubisdk.GattInterface
@@ -4156,9 +4137,9 @@ androidx.core.content.res.ComplexColorCompat
     private static final java.lang.String LOG_TAG
 androidx.appcompat.widget.AppCompatCheckedTextView
     public void <init>(android.content.Context)
-io.flutter.embedding.engine.systemchannels.PlatformChannel
-    private static final java.lang.String TAG
 io.flutter.embedding.engine.systemchannels.PlatformViewsChannel
+    private static final java.lang.String TAG
+io.flutter.embedding.engine.systemchannels.PlatformChannel
     private static final java.lang.String TAG
 androidx.core.graphics.drawable.WrappedDrawableApi21
     private static final java.lang.String TAG
@@ -4595,7 +4576,6 @@ io.flutter.Log
     public static void setLogLevel(int)
     public static void println(int,java.lang.String,java.lang.String)
     public static void v(java.lang.String,java.lang.String,java.lang.Throwable)
-    public static void i(java.lang.String,java.lang.String)
     public static void i(java.lang.String,java.lang.String,java.lang.Throwable)
     public static void d(java.lang.String,java.lang.String,java.lang.Throwable)
     public static void wtf(java.lang.String,java.lang.String)
@@ -5625,7 +5605,6 @@ androidx.lifecycle.LiveData
     int getVersion()
     public boolean hasObservers()
     static final int START_VERSION
-io.flutter.embedding.engine.loader.ResourceExtractor$1
 androidx.legacy.coreui.R$dimen
 androidx.core.app.ShareCompat$IntentBuilder
 androidx.fragment.app.FragmentManagerNonConfig
@@ -6477,68 +6456,25 @@ androidx.core.app.RemoteInput
     public java.util.Set getAllowedDataTypes()
     public boolean getAllowFreeFormInput()
     public android.os.Bundle getExtras()
-androidx.appcompat.graphics.drawable.AnimatedStateListDrawableCompat
-    static void <clinit>()
-    public static final java.lang.String LOGTAG
 androidx.core.content.res.GrowingArrayUtils
     public void <init>()
     static void <clinit>()
     public static final synthetic boolean $assertionsDisabled
-androidx.constraintlayout.solver.SolverVariable
-    static void <clinit>()
-    public static int uniqueSlackId
-    public static int uniqueUnrestrictedId
-    public static int uniqueConstantId
-    public static int uniqueId
-io.flutter.view.AccessibilityBridge
-    static void <clinit>()
 com.google.android.material.shape.MaterialShapeDrawable
     public void setInterpolation(float)
-androidx.loader.app.LoaderManagerImpl
-    static void <clinit>()
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ShadowAnimatorImpl
     public abstract float getTargetShadowSize()
-sdk.android.api.org.webrtc.RendererCommon
-    static void <clinit>()
-    public static float BALANCED_VISIBLE_FRACTION
-androidx.core.view.KeyEventDispatcher
-    static void <clinit>()
-io.flutter.embedding.android.FlutterSplashView
-    static void <clinit>()
 com.google.android.material.bottomappbar.BottomAppBarTopEdgeTreatment
     public void setFabDiameter(float)
-androidx.core.view.accessibility.AccessibilityNodeInfoCompat
-    static void <clinit>()
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ElevateToHoveredFocusedTranslationZAnimation
     public float getTargetShadowSize()
-androidx.appcompat.widget.VectorEnabledTintResources
-    static void <clinit>()
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ElevateToPressedTranslationZAnimation
     public float getTargetShadowSize()
-io.flutter.Log
-    static void <clinit>()
-    public static int logLevel
-    public static int ASSERT
-    public static int DEBUG
-    public static int ERROR
-    public static int INFO
-    public static int VERBOSE
-    public static int WARN
-androidx.constraintlayout.solver.widgets.ConstraintWidget
-    static void <clinit>()
 com.google.android.material.bottomappbar.BottomAppBar$2
-androidx.appcompat.app.AppCompatDelegate
-    static void <clinit>()
 androidx.appcompat.app.ToolbarActionBar
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$DisabledElevationAnimation
     public float getTargetShadowSize()
-androidx.constraintlayout.solver.LinearSystem
-    static void <clinit>()
 com.google.android.material.floatingactionbutton.FloatingActionButtonImpl$ResetElevationAnimation
     public float getTargetShadowSize()
-androidx.core.graphics.TypefaceCompatApi21Impl
-    static void <clinit>()
 androidx.appcompat.app.WindowDecorActionBar
     public static final synthetic boolean $assertionsDisabled
-androidx.activity.ImmLeaksCleaner
-    static void <clinit>()
