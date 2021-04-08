@@ -10,14 +10,14 @@ typedef void ZoomViewCreatedCallback(ZoomViewController controller);
 class ZoomView extends StatefulWidget {
   const ZoomView({
     Key? key,
-    required this.zoomOptions,
-    required this.meetingOptions,
+    this.zoomOptions,
+    this.meetingOptions,
     this.onViewCreated,
   }) : super(key: key);
 
   final ZoomViewCreatedCallback? onViewCreated;
-  final ZoomOptions zoomOptions;
-  final ZoomMeetingOptions meetingOptions;
+  final ZoomOptions? zoomOptions;
+  final ZoomMeetingOptions? meetingOptions;
 
   @override
   State<StatefulWidget> createState() => _ZoomViewState();
@@ -66,8 +66,8 @@ class ZoomViewController {
     assert(options != null);
 
     var optionMap = new Map<String, String>();
-    optionMap.putIfAbsent("appKey", () => options.appKey);
-    optionMap.putIfAbsent("appSecret", () => options.appSecret);
+    optionMap.putIfAbsent("appKey", () => options.appKey!);
+    optionMap.putIfAbsent("appSecret", () => options.appSecret!);
     optionMap.putIfAbsent("domain", () => options.domain);
 
     return _methodChannel.invokeMethod('init', optionMap);
@@ -76,10 +76,10 @@ class ZoomViewController {
   Future startMeeting(ZoomMeetingOptions options) async {
     assert(options != null);
     var optionMap = new Map<String, String>();
-    optionMap.putIfAbsent("userId", () => options.userId);
-    optionMap.putIfAbsent("displayName", () => options.displayName);
-    optionMap.putIfAbsent("meetingId", () => options.meetingId);
-    optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword);
+    optionMap.putIfAbsent("userId", () => options.userId!);
+    optionMap.putIfAbsent("displayName", () => options.displayName!);
+    optionMap.putIfAbsent("meetingId", () => options.meetingId!);
+    optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
     optionMap.putIfAbsent("zoomToken", () => options.zoomToken);
     optionMap.putIfAbsent("zoomAccessToken", () => options.zoomAccessToken);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
@@ -98,9 +98,9 @@ class ZoomViewController {
   Future joinMeeting(ZoomMeetingOptions options) async {
     assert(options != null);
     var optionMap = new Map<String, String>();
-    optionMap.putIfAbsent("userId", () => options.userId);
-    optionMap.putIfAbsent("meetingId", () => options.meetingId);
-    optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword);
+    optionMap.putIfAbsent("userId", () => options.userId!);
+    optionMap.putIfAbsent("meetingId", () => options.meetingId!);
+    optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
     optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
     optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
     optionMap.putIfAbsent("disableInvite", () => options.disableInvite);

@@ -2,24 +2,24 @@
 class ZoomOptions {
 
   String domain;
-  String appKey;
-  String appSecret;
-  String jwtToken;
+  String? appKey;
+  String? appSecret;
+  String? jwtToken;
 
   ZoomOptions({
     required this.domain,
-    required this.appKey,
-    required this.appSecret,
-    required this.jwtToken
+    this.appKey,
+    this.appSecret,
+    this.jwtToken
   });
 }
 
 class ZoomMeetingOptions {
 
-  String userId;
-  String displayName;
-  String meetingId;
-  String meetingPassword;
+  String? userId;
+  String? displayName;
+  String? meetingId;
+  String? meetingPassword;
   String zoomToken;
   String zoomAccessToken;
   String disableDialIn;
@@ -33,10 +33,10 @@ class ZoomMeetingOptions {
   String noMore;
 
   ZoomMeetingOptions({
-    required this.userId,
-    required this.displayName,
-    required this.meetingId,
-    required this.meetingPassword,
+    this.userId,
+    this.displayName,
+    this.meetingId,
+    this.meetingPassword,
     required this.zoomToken,
     required this.zoomAccessToken,
     required this.disableDialIn,
