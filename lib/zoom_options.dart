@@ -7,10 +7,10 @@ class ZoomOptions {
   String jwtToken;
 
   ZoomOptions({
-    this.domain,
-    this.appKey,
-    this.appSecret,
-    this.jwtToken
+    required this.domain,
+    required this.appKey,
+    required this.appSecret,
+    required this.jwtToken
   });
 }
 
@@ -33,20 +33,20 @@ class ZoomMeetingOptions {
   String noMore;
 
   ZoomMeetingOptions({
-    this.userId,
-    this.displayName,
-    this.meetingId,
-    this.meetingPassword,
-    this.zoomToken,
-    this.zoomAccessToken,
-    this.disableDialIn,
-    this.disableDrive,
-    this.disableInvite,
-    this.disableShare,
-    this.noDisconnectAudio,
-    this.noAudio,
-    this.noTitle,
-    this.noParticipant,
-    this.noMore,
+    required this.userId,
+    required this.displayName,
+    required this.meetingId,
+    required this.meetingPassword,
+    required this.zoomToken,
+    required this.zoomAccessToken,
+    required this.disableDialIn,
+    required this.disableDrive,
+    required this.disableInvite,
+    required this.disableShare,
+    required this.noDisconnectAudio,
+    required this.noAudio,
+    required this.noTitle,
+    required this.noParticipant,
+    required this.noMore,
   });
 }
