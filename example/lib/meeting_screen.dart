@@ -8,12 +8,12 @@ import 'package:flutter/material.dart';
 
 class MeetingWidget extends StatelessWidget {
 
-  ZoomOptions zoomOptions;
-  ZoomMeetingOptions meetingOptions;
+  ZoomOptions? zoomOptions;
+  ZoomMeetingOptions? meetingOptions;
 
-  Timer timer;
+  Timer? timer;
 
-  MeetingWidget({Key key, meetingId, meetingPassword}) : super(key: key) {
+  MeetingWidget({Key? key, meetingId, meetingPassword}) : super(key: key) {
     this.zoomOptions = new ZoomOptions(
       domain: "zoom.us",
       appKey: "appKey",
@@ -56,7 +56,7 @@ class MeetingWidget extends StatelessWidget {
 
           print("Created the view");
 
-          controller.initZoom(this.zoomOptions)
+          controller.initZoom(this.zoomOptions!)
               .then((results) {
 
             print("initialised");
@@ -74,11 +74,11 @@ class MeetingWidget extends StatelessWidget {
 
               print("listen on event channel");
 
-              controller.joinMeeting(this.meetingOptions)
+              controller.joinMeeting(this.meetingOptions!)
                   .then((joinMeetingResult) {
 
                 timer = Timer.periodic(new Duration(seconds: 2), (timer) {
-                  controller.meetingStatus(this.meetingOptions.meetingId)
+                  controller.meetingStatus(this.meetingOptions!.meetingId!)
                       .then((status) {
                     print("Meeting Status Polling: " + status[0] + " - " + status[1]);
                   });
