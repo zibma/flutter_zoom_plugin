@@ -4137,9 +4137,9 @@ androidx.core.content.res.ComplexColorCompat
     private static final java.lang.String LOG_TAG
 androidx.appcompat.widget.AppCompatCheckedTextView
     public void <init>(android.content.Context)
-io.flutter.embedding.engine.systemchannels.PlatformViewsChannel
-    private static final java.lang.String TAG
 io.flutter.embedding.engine.systemchannels.PlatformChannel
+    private static final java.lang.String TAG
+io.flutter.embedding.engine.systemchannels.PlatformViewsChannel
     private static final java.lang.String TAG
 androidx.core.graphics.drawable.WrappedDrawableApi21
     private static final java.lang.String TAG

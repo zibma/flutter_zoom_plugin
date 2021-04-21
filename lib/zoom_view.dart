@@ -89,7 +89,7 @@ class ZoomViewController {
     // optionMap.putIfAbsent(
     //     "noDisconnectAudio", () => options.noDisconnectAudio!);
     // optionMap.putIfAbsent("noAudio", () => options.noAudio!);
-    optionMap.putIfAbsent("noTitleBar", () => options.noTitleBar!);
+    // optionMap.putIfAbsent("noTitleBar", () => options.noTitleBar!);
     // optionMap.putIfAbsent("noParticipant", () => options.noParticipant!);
     // optionMap.putIfAbsent("noMore", () => options.noMore!);
 
