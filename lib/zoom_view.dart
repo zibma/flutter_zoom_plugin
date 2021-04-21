@@ -82,6 +82,7 @@ class ZoomViewController {
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
     optionMap.putIfAbsent("zoomToken", () => options.zoomToken!);
     optionMap.putIfAbsent("zoomAccessToken", () => options.zoomAccessToken!);
+    optionMap.putIfAbsent("meetingViewsOptions", () => options.meetingViewsOptions!);
     // optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn!);
     // optionMap.putIfAbsent("disableDrive", () => options.disableDrive!);
     // optionMap.putIfAbsent("disableInvite", () => options.disableInvite!);

@@ -171,7 +171,7 @@ public class ZoomView implements PlatformView, MethodChannel.MethodCallHandler,
         opts.no_share = false;
         opts.invite_options = 255;
         opts.no_video = false;
-        opts.meeting_views_options = 0;
+        opts.meeting_views_options = parseInt(options, "meetingViewsOptions", 0);
         opts.no_meeting_error_message = false;
 
 
