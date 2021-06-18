@@ -21,22 +21,32 @@ class MeetingWidget extends StatelessWidget {
       appSecret: SDKSecret,
     );
     this.meetingOptions = new ZoomMeetingOptions(
-        userId: 'example',
-        meetingId: meetingId,
-        meetingPassword: meetingPassword,
-        displayName: 'example',
-        zoomAccessToken: '',
-        zoomToken: '',
+      userId: 'example',
+      meetingId: meetingId,
+      meetingPassword: meetingPassword,
+      displayName: 'example',
+      zoomAccessToken: '',
+      zoomToken: '',
+      // disableDialIn: "true",
+      // disableDrive: "true",
+      // disableInvite: "false",
+      // disableShare: "false",
+      // noAudio: "false",
+      // noDisconnectAudio: "false",
+      // noMore: "false",
+      // noTitle: "false",
+      // noParticipant: "false",
+
       disableDialIn: "true",
       disableDrive: "true",
-      disableInvite: "false",
-      disableShare: "false",
+      disableInvite: "true",
+      disableShare: "true",
       noAudio: "false",
       noDisconnectAudio: "false",
-      noMore: "false",
-      noTitle: "false",
-      noParticipant: "false",
-      );
+      noMore: "true",
+      noTitle: "true",
+      noParticipant: "true",
+    );
   }
 
   bool _isMeetingEnded(String status) {

@@ -15,7 +15,7 @@ class StartMeetingWidget extends StatelessWidget {
   String SDKSecret = 'qmo84JZAg24dguzikPZX49QwajdhpxBiYtu3';
   String Username = 'viren@zibma.com';
   String zoomAccessToken_ZAK =
-      'eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6ImFfTlVXQkxOU1g2UFQ5TUZuZUFhWHciLCJpc3MiOiJ3ZWIiLCJzdHkiOjEwMCwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiI4RnNMbG54b0pHZlY1WTA3X3dDOFh6Z2tDMXJCZXNNd2R3MEJnbjMxUUFvLkJnWVljR3hHVGpscFJuZDFORFJKYUN0VWNHUjJlVkJLVVQwOVFEWTNOR1V5WldRMU5tWXlOemsxT1dVeVptWmtZams0WldabFlUaGpPREk0T0RVeE1tRXdZekE0TlRjM05ERTJPRFF5TWpjME1qQXlZakl4WWpoaU1Ua0FJRVZPTkhWM1ZUWXliWEZZU0d4aWVFUlVPVU4yT1hOcGVuVnpMemMzYlV0b0FBTmhkekVBQUFGNkhaUGJTUUFTZFFBQUFBIiwiZXhwIjoxNjI0MDAxMDY3LCJpYXQiOjE2MjM5OTM4NjcsImFpZCI6Ik40X1B0Vm1WVGhhQnVNS3g4UVVkTHciLCJjaWQiOiIifQ.-6CQIkE264YVjy658vpo2uDWa57zasOlpmCNZrR6emE';
+      'eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6ImFfTlVXQkxOU1g2UFQ5TUZuZUFhWHciLCJpc3MiOiJ3ZWIiLCJzdHkiOjEwMCwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJjS0ZRVThkWkRkWmR4TnpvRjlHRWVJYW1vYVdnN3dEd2IwUkZFektsU0wwLkJnWVljR3hHVGpscFJuZDFORFJKYUN0VWNHUjJlVkJLVVQwOVFEWTNOR1V5WldRMU5tWXlOemsxT1dVeVptWmtZams0WldabFlUaGpPREk0T0RVeE1tRXdZekE0TlRjM05ERTJPRFF5TWpjME1qQXlZakl4WWpoaU1Ua0FJRVZPTkhWM1ZUWXliWEZZU0d4aWVFUlVPVU4yT1hOcGVuVnpMemMzYlV0b0FBTmhkekVBQUFGNkhrdjJwQUFTZFFBQUFBIiwiZXhwIjoxNjI0MDEzMTMyLCJpYXQiOjE2MjQwMDU5MzIsImFpZCI6Ik40X1B0Vm1WVGhhQnVNS3g4UVVkTHciLCJjaWQiOiIifQ.Dk-Xax5M3AQ7WSo6eLiNaRcdhPqxvr9FecKw76BiatY';
   String displayName = 'Android';
 
   StartMeetingWidget({Key? key, meetingId}) : super(key: key) {
@@ -33,13 +33,17 @@ class StartMeetingWidget extends StatelessWidget {
       zoomAccessToken: zoomAccessToken_ZAK,
       disableDialIn: "true",
       disableDrive: "true",
-      disableInvite: "true",
-      disableShare: "true",
+      disableInvite: "false",
+      disableShare: "false",
       noAudio: "false",
       noDisconnectAudio: "false",
-      noMore: "true",
-      noTitle: "true",
-      noParticipant: "true",
+      noMore: "false",
+      noTitle: "false",
+      noParticipant: "false",
+
+
+
+
     );
   }
 
