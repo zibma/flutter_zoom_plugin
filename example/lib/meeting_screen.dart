@@ -27,12 +27,15 @@ class MeetingWidget extends StatelessWidget {
         displayName: 'example',
         zoomAccessToken: '',
         zoomToken: '',
-        noInvite: 'true',
-        noMeetingEndMessage: 'true',
-        meetingViewsOptions: '104',
-        noTitleBar: "false",
-        noDialOutToPhone: 'true',
-        noDialInViaPhone: 'true',
+      disableDialIn: "true",
+      disableDrive: "true",
+      disableInvite: "false",
+      disableShare: "false",
+      noAudio: "false",
+      noDisconnectAudio: "false",
+      noMore: "false",
+      noTitle: "false",
+      noParticipant: "false",
       );
   }
 

@@ -31,7 +31,15 @@ class StartMeetingWidget extends StatelessWidget {
       meetingPassword: '',
       zoomToken: "<user_token>",
       zoomAccessToken: zoomAccessToken_ZAK,
-      meetingViewsOptions: "96"
+      disableDialIn: "true",
+      disableDrive: "true",
+      disableInvite: "true",
+      disableShare: "true",
+      noAudio: "false",
+      noDisconnectAudio: "false",
+      noMore: "true",
+      noTitle: "true",
+      noParticipant: "true",
     );
   }
 
