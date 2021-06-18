@@ -68,7 +68,7 @@ class ZoomViewController {
     var optionMap = new Map<String, String>();
     optionMap.putIfAbsent("appKey", () => options.appKey!);
     optionMap.putIfAbsent("appSecret", () => options.appSecret!);
-    optionMap.putIfAbsent("domain", () => options.domain);
+    optionMap.putIfAbsent("domain", () => options.domain!);
 
     return _methodChannel.invokeMethod('init', optionMap);
   }
@@ -80,17 +80,17 @@ class ZoomViewController {
     optionMap.putIfAbsent("displayName", () => options.displayName!);
     optionMap.putIfAbsent("meetingId", () => options.meetingId!);
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
-    optionMap.putIfAbsent("zoomToken", () => options.zoomToken);
-    optionMap.putIfAbsent("zoomAccessToken", () => options.zoomAccessToken);
-    optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
-    optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
-    optionMap.putIfAbsent("disableInvite", () => options.disableInvite);
-    optionMap.putIfAbsent("disableShare", () => options.disableShare);
-    optionMap.putIfAbsent("noDisconnectAudio", () => options.noDisconnectAudio);
-    optionMap.putIfAbsent("noAudio", () => options.noAudio);
-    optionMap.putIfAbsent("noTitle", () => options.noTitle);
-    optionMap.putIfAbsent("noParticipant", () => options.noParticipant);
-    optionMap.putIfAbsent("noMore", () => options.noMore);
+    optionMap.putIfAbsent("zoomToken", () => options.zoomToken!);
+    optionMap.putIfAbsent("zoomAccessToken", () => options.zoomAccessToken!);
+    optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn!);
+    optionMap.putIfAbsent("disableDrive", () => options.disableDrive!);
+    optionMap.putIfAbsent("disableInvite", () => options.disableInvite!);
+    optionMap.putIfAbsent("disableShare", () => options.disableShare!);
+    optionMap.putIfAbsent("noDisconnectAudio", () => options.noDisconnectAudio!);
+    optionMap.putIfAbsent("noAudio", () => options.noAudio!);
+    optionMap.putIfAbsent("noTitle", () => options.noTitle!);
+    optionMap.putIfAbsent("noParticipant", () => options.noParticipant!);
+    optionMap.putIfAbsent("noMore", () => options.noMore!);
 
     return _methodChannel.invokeMethod('start', optionMap);
   }
@@ -101,15 +101,15 @@ class ZoomViewController {
     optionMap.putIfAbsent("userId", () => options.userId!);
     optionMap.putIfAbsent("meetingId", () => options.meetingId!);
     optionMap.putIfAbsent("meetingPassword", () => options.meetingPassword!);
-    optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn);
-    optionMap.putIfAbsent("disableDrive", () => options.disableDrive);
-    optionMap.putIfAbsent("disableInvite", () => options.disableInvite);
-    optionMap.putIfAbsent("disableShare", () => options.disableShare);
-    optionMap.putIfAbsent("noDisconnectAudio", () => options.noDisconnectAudio);
-    optionMap.putIfAbsent("noAudio", () => options.noAudio);
-    optionMap.putIfAbsent("noTitle", () => options.noTitle);
-    optionMap.putIfAbsent("noParticipant", () => options.noParticipant);
-    optionMap.putIfAbsent("noMore", () => options.noMore);
+    optionMap.putIfAbsent("disableDialIn", () => options.disableDialIn!);
+    optionMap.putIfAbsent("disableDrive", () => options.disableDrive!);
+    optionMap.putIfAbsent("disableInvite", () => options.disableInvite!);
+    optionMap.putIfAbsent("disableShare", () => options.disableShare!);
+    optionMap.putIfAbsent("noDisconnectAudio", () => options.noDisconnectAudio!);
+    optionMap.putIfAbsent("noAudio", () => options.noAudio!);
+    optionMap.putIfAbsent("noTitle", () => options.noTitle!);
+    optionMap.putIfAbsent("noParticipant", () => options.noParticipant!);
+    optionMap.putIfAbsent("noMore", () => options.noMore!);
 
     return _methodChannel.invokeMethod('join', optionMap);
   }

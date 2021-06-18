@@ -1,7 +1,7 @@
 
 class ZoomOptions {
 
-  String domain;
+  String? domain;
   String? appKey;
   String? appSecret;
   String? jwtToken;
@@ -20,17 +20,17 @@ class ZoomMeetingOptions {
   String? displayName;
   String? meetingId;
   String? meetingPassword;
-  String zoomToken;
-  String zoomAccessToken;
-  String disableDialIn;
-  String disableDrive;
-  String disableInvite;
-  String disableShare;
-  String noDisconnectAudio;
-  String noAudio;
-  String noTitle;
-  String noParticipant;
-  String noMore;
+  String? zoomToken;
+  String? zoomAccessToken;
+  String? disableDialIn;
+  String? disableDrive;
+  String? disableInvite;
+  String? disableShare;
+  String? noDisconnectAudio;
+  String? noAudio;
+  String? noTitle;
+  String? noParticipant;
+  String? noMore;
 
   ZoomMeetingOptions({
     this.userId,
