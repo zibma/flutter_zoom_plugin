@@ -15,7 +15,7 @@ class StartMeetingWidget extends StatelessWidget {
   String SDKSecret = 'qmo84JZAg24dguzikPZX49QwajdhpxBiYtu3';
   String Username = 'viren@zibma.com';
   String zoomAccessToken_ZAK =
-      'eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnQiLCJ1aWQiOiJhX05VV0JMTlNYNlBUOU1GbmVBYVh3IiwiaXNzIjoid2ViIiwic3R5IjoxMDAsIndjZCI6ImF3MSIsImNsdCI6MCwic3RrIjoiMmxtZi1kRkhkaGdWWl9CbnFmZ2FyY2Y5cEZaTV96YmhZTFVFbTFQM1lqOC5CZ1lZY0d4R1RqbHBSbmQxTkRSSmFDdFVjR1IyZVZCS1VUMDlRREkzWWpreU1EQmlNVEZoWVRCa1l6TTVOREJtWlRCaFl6RXlZVEptTW1NeU1tRm1OV1F6Tm1WaVpHSXdZMlppWW1ObVlUQmpPV1ZqWkRka05XSXlaamtBRERORFFrRjFiMmxaVXpOelBRQURZWGN4QUFBQmVLcHZVZTRBRW5VQUFBQSIsImV4cCI6MTYxNzc3NDMyNSwiaWF0IjoxNjE3NzY3MTI1LCJhaWQiOiJONF9QdFZtVlRoYUJ1TUt4OFFVZEx3IiwiY2lkIjoiIn0.qFWE0c-D1WVlvMYM-Efw2ZuKBRp7XbPq0Br3ig--U5k';
+      'eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6ImFfTlVXQkxOU1g2UFQ5TUZuZUFhWHciLCJpc3MiOiJ3ZWIiLCJzdHkiOjEwMCwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiI4RnNMbG54b0pHZlY1WTA3X3dDOFh6Z2tDMXJCZXNNd2R3MEJnbjMxUUFvLkJnWVljR3hHVGpscFJuZDFORFJKYUN0VWNHUjJlVkJLVVQwOVFEWTNOR1V5WldRMU5tWXlOemsxT1dVeVptWmtZams0WldabFlUaGpPREk0T0RVeE1tRXdZekE0TlRjM05ERTJPRFF5TWpjME1qQXlZakl4WWpoaU1Ua0FJRVZPTkhWM1ZUWXliWEZZU0d4aWVFUlVPVU4yT1hOcGVuVnpMemMzYlV0b0FBTmhkekVBQUFGNkhaUGJTUUFTZFFBQUFBIiwiZXhwIjoxNjI0MDAxMDY3LCJpYXQiOjE2MjM5OTM4NjcsImFpZCI6Ik40X1B0Vm1WVGhhQnVNS3g4UVVkTHciLCJjaWQiOiIifQ.-6CQIkE264YVjy658vpo2uDWa57zasOlpmCNZrR6emE';
   String displayName = 'Android';
 
   StartMeetingWidget({Key? key, meetingId}) : super(key: key) {
@@ -31,6 +31,7 @@ class StartMeetingWidget extends StatelessWidget {
       meetingPassword: '',
       zoomToken: "<user_token>",
       zoomAccessToken: zoomAccessToken_ZAK,
+      meetingViewsOptions: "96"
     );
   }
 
