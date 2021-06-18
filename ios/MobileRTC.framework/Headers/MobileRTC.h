@@ -77,6 +77,10 @@
  @brief [Optional] If you use screen share, you need create group id in your apple developer account, and setup here.
  */
 @property (nonatomic, copy) NSString                        * _Nullable appGroupId;
+/*!
+ @brief [Optional] If you use direct screen share, you need create replaykit bundle identifier in your apple developer account, and setup here.
+ */
+@property (nonatomic, copy) NSString                        * _Nullable replaykitBundleIdentifier;
 @end
 
 /*!
@@ -86,27 +90,6 @@
  @warning The user can only obtain SDK configuration by initializing the class.  
  */
 @interface MobileRTC : NSObject
-{
-    NSString               *_mobileRTCDomain;
-    NSString               *_mobileRTCResPath;
-    NSString               *_mobileRTCCustomLocalizableName;
-    MobileRTCMeetingService         *_meetingService;
-    MobileRTCMeetingSettings        *_meetingSettings;
-    
-    MobileRTCAuthService            *_authService;
-    MobileRTCPremeetingService      *_premeetingService;
-    
-    MobileRTCAnnotationService      *_annotationService;
-    
-    MobileRTCRemoteControlService   *_remoteControlService;
-    MobileRTCWaitingRoomService     *_waitingRoomService;
-    
-    MobileRTCSMSService             *_smsService;
-    MobileRTCDirectShareService     *_directShareService;
-    
-    MobileRTCVideoSourceHelper      *_videoSourceHelper;
-}
-
 /*!
  @brief MobileRTC domain, read-only.  
  */

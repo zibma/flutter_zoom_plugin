@@ -112,7 +112,7 @@
 - (MobileRTCAudioError)muteMyAudio:(BOOL)mute;
 
 /*!
- @brief Set to switch audio source of the current user.
+ @brief switch my audio output(receiver/speaker).
  */
 - (MobileRTCAudioError)switchMyAudioSource;
 

@@ -32,6 +32,8 @@ typedef NS_ENUM(NSUInteger, MobileRTCAuthError) {
     MobileRTCAuthError_NetworkIssue,
     ///Account does not support this SDK version
     MobileRTCAuthError_ClientIncompatible,
+    ///The jwt token to authenticate is wrong
+    MobileRTCAuthError_TokenWrong,
 };
 
 /*!
@@ -57,7 +59,9 @@ typedef NS_ENUM(NSUInteger, MobileRTCLoginFailReason) {
     ///SMS code expired.
     MobileRTCLoginFailReason_SMSCodeExpired,
     ///Phone number format invalid.
-    MobileRTCLoginFailReason_PhoneNumberFormatInValid ,
+    MobileRTCLoginFailReason_PhoneNumberFormatInValid,
+    ///Login token invalid.
+    MobileRTCLoginFailReason_LoginTokenInvalid,
     ///Login fail other reason.
     MobileRTCLoginFailReason_OtherIssue = 100,
 };
@@ -495,6 +499,8 @@ typedef NS_ENUM(NSUInteger, MobileRTCMeetingEndReason) {
     MobileRTCMeetingEndReason_JBHTimeout                = 3,
     ///Meeting ends when the free service is over.
     MobileRTCMeetingEndReason_FreeMeetingTimeout        = 4,
+    ///No ateendee
+    MobileRTCMeetingEndReason_NoAteendee                = 5,
     ///Meeting ends by the host for he will start another meeting.
     MobileRTCMeetingEndReason_HostEndForAnotherMeeting  = 6,
     ///Meeting ends for SDK disconnects, such as network issue.
@@ -750,6 +756,20 @@ typedef NS_ENUM(NSUInteger, MobileRTCBOHelpReply) {
 };
 
 /*!
+ @brief Error type of Starting BO Failed
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCBOControllerError) {
+    MobileRTCBOControllerError_NULL_POINTER = 0,
+    MobileRTCBOControllerError_WRONG_CURRENT_STATUS,
+    MobileRTCBOControllerError_TOKEN_NOT_READY,
+    MobileRTCBOControllerError_NO_PRIVILEGE,
+    MobileRTCBOControllerError_BO_LIST_IS_UPLOADING,
+    MobileRTCBOControllerError_UPLOAD_FAIL,
+    MobileRTCBOControllerError_NO_ONE_HAS_BEEN_ASSIGNED,
+    MobileRTCBOControllerError_UNKNOWN = 100
+};
+
+/*!
 @brief Direct sharing status.
 */
 typedef NS_ENUM(NSUInteger, MobileRTCDirectShareStatus) {
@@ -760,7 +780,9 @@ typedef NS_ENUM(NSUInteger, MobileRTCDirectShareStatus) {
     MobileRTCDirectShareStatus_Need_MeetingID_Or_PairingCode, //<Re-enter the meeting ID/paring code.
     MobileRTCDirectShareStatus_NetWork_Error, //<Network error. Please try again later.
     MobileRTCDirectShareStatus_Other_Error, //<Other errors. Mainly occur in SIP call mode.
-    MobileRTCDirectShareStatus_WrongMeetingID_Or_SharingKey //<Wrong meeting id or sharing key.
+    MobileRTCDirectShareStatus_WrongMeetingID_Or_SharingKey, //<Wrong meeting id or sharing key.
+    MobileRTCDirectShareStatus_Need_Input_New_ParingCode, //<require input paringCode again for users on a different network.
+    MobileRTCDirectShareStatus_DirectShare_Prepared // Direct share prepared
 };
 
 /*!
@@ -820,4 +842,19 @@ typedef NS_ENUM(NSUInteger, MobileRTCUserRole) {
     //Moderator of breakout room.
     MobileRTCUserRole_BreakoutRoom_Moderator,
 };
+
+/*!
+ @brief Enumeration of recording status.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCRecordingStatus) {
+    //recording start.
+    MobileRTCRecording_Start,
+    //recording stop.
+    MobileRTCRecording_Stop,
+    //Pause recording.
+    MobileRTCRecording_Pause,
+    //recording connecting.
+    MobileRTCRecording_Connecting,
+};
+
 

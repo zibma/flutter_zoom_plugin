@@ -121,6 +121,7 @@
 
 /*!
  @brief Show/Hide the waiting HUD while starting/joining a meeting.
+ @warning The function only for Zoom UI.
  */
 @property (assign, nonatomic) BOOL waitingHUDHidden;
 
@@ -410,7 +411,7 @@
 - (BOOL)copyMeetingUrlDisabled;
 
 /*!
-@brief Set to disable copy meeting url.
+@brief Set to disable copy meeting url in the meeting info view.
 @param disabled The option value.
 @warning The function only for Zoom UI.
 */
