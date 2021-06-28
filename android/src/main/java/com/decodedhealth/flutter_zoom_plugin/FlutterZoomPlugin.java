@@ -1,4 +1,4 @@
-package com.decodedhealth.flutter_zoom_plugin_ios;
+package com.decodedhealth.flutter_zoom_plugin;
 
 import io.flutter.plugin.common.PluginRegistry.Registrar;
 
@@ -7,6 +7,6 @@ public class FlutterZoomPlugin {
 
   /** Plugin registration. */
   public static void registerWith(Registrar registrar) {
-    registrar.platformViewRegistry().registerViewFactory("flutter_zoom_plugin_ios", new ZoomViewFactory(registrar.messenger()));
+    registrar.platformViewRegistry().registerViewFactory("flutter_zoom_plugin", new ZoomViewFactory(registrar.messenger()));
   }
 }

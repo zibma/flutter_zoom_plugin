@@ -1,4 +1,4 @@
-package com.decodedhealth.flutter_zoom_plugin_ios;
+package com.decodedhealth.flutter_zoom_plugin;
 
 import android.content.Context;
 

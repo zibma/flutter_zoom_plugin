@@ -1,5 +1,5 @@
 #import "FlutterZoomPlugin.h"
-#import <flutter_zoom_plugin_ios/flutter_zoom_plugin_ios-Swift.h>
+#import <flutter_zoom_plugin/flutter_zoom_plugin-Swift.h>
 
 @implementation FlutterZoomPlugin
 + (void)registerWithRegistrar:(NSObject<FlutterPluginRegistrar>*)registrar {

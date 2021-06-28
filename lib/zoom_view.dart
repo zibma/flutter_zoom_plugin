@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import 'package:flutter_zoom_plugin_ios/zoom_options.dart';
+import 'package:flutter_zoom_plugin/zoom_options.dart';
 
 typedef void ZoomViewCreatedCallback(ZoomViewController controller);
 
@@ -28,18 +28,18 @@ class _ZoomViewState extends State<ZoomView> {
   Widget build(BuildContext context) {
     if (defaultTargetPlatform == TargetPlatform.android) {
       return AndroidView(
-        viewType: 'flutter_zoom_plugin_ios',
+        viewType: 'flutter_zoom_plugin',
         onPlatformViewCreated: _onPlatformViewCreated,
       );
     }
     if (defaultTargetPlatform == TargetPlatform.iOS) {
       return UiKitView(
-        viewType: 'flutter_zoom_plugin_ios',
+        viewType: 'flutter_zoom_plugin',
         onPlatformViewCreated: _onPlatformViewCreated,
       );
     }
     return Text(
-        '$defaultTargetPlatform is not yet supported by the flutter_zoom_plugin_ios plugin');
+        '$defaultTargetPlatform is not yet supported by the flutter_zoom_plugin plugin');
   }
 
   void _onPlatformViewCreated(int id) {
@@ -55,7 +55,7 @@ class _ZoomViewState extends State<ZoomView> {
 class ZoomViewController {
   ZoomViewController._(int id)
       : _methodChannel =
-            new MethodChannel('com.decodedhealth/flutter_zoom_plugin_ios'),
+            new MethodChannel('com.decodedhealth/flutter_zoom_plugin'),
         _zoomStatusEventChannel =
             new EventChannel("com.decodedhealth/zoom_event_stream");
 

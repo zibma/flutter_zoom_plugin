@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_zoom_plugin_ios/zoom_options.dart';
-import 'package:flutter_zoom_plugin_ios/zoom_view.dart';
+import 'package:flutter_zoom_plugin/zoom_options.dart';
+import 'package:flutter_zoom_plugin/zoom_view.dart';
 
 class MeetingWidget extends StatelessWidget {
   ZoomOptions? zoomOptions;

@@ -49,8 +49,6 @@
  */
 @property (retain, nonatomic, readonly) NSString * _Nonnull joinMeetingURL;
 
-//@property (assign, nonatomic) NSString joinForMeetingURL;
-
 /*!
  @brief Get the meeting password.
  */

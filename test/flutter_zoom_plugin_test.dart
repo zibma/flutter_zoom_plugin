@@ -1,9 +1,9 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_zoom_plugin_ios/zoom_view.dart';
+import 'package:flutter_zoom_plugin/zoom_view.dart';
 
 void main() {
-  const MethodChannel channel = MethodChannel('flutter_zoom_plugin_ios');
+  const MethodChannel channel = MethodChannel('flutter_zoom_plugin');
 
   setUp(() {
     channel.setMockMethodCallHandler((MethodCall methodCall) async {

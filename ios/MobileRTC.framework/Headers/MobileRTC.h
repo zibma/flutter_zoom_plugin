@@ -193,12 +193,6 @@
 - (MobileRTCMeetingSettings * _Nullable)getMeetingSettings;
 
 /*!
- @brief Get the MobileRTC default Invite Helper.
- @return The MobileRTC default InviteHelper.
- */
-- (MobileRTCInviteHelper * _Nullable)getInviteHelper;
-
-/*!
  @brief Get the MobileRTC default annotation service.   
  @return The preconfigured annotation service.  
  */
