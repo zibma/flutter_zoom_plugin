@@ -1,5 +1,5 @@
-name: flutter_zoom_plugin_example
-description: Demonstrates how to use the flutter_zoom_plugin plugin.
+name: flutter_zoom_plugin_ios_example
+description: Demonstrates how to use the flutter_zoom_plugin_ios plugin.
 publish_to: 'none'
 
 environment:
@@ -17,7 +17,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  flutter_zoom_plugin:
+  flutter_zoom_plugin_ios:
     path: ../
 
 # For information on the generic Dart part of this file, see the

@@ -1,4 +1,4 @@
-package com.decodedhealth.flutter_zoom_plugin;
+package com.decodedhealth.flutter_zoom_plugin_ios;
 
 import android.content.Context;
 import android.view.View;
@@ -37,7 +37,7 @@ public class ZoomView  implements PlatformView,
         textView = new TextView(context);
         this.context = context;
 
-        methodChannel = new MethodChannel(messenger, "com.decodedhealth/flutter_zoom_plugin");
+        methodChannel = new MethodChannel(messenger, "com.decodedhealth/flutter_zoom_plugin_ios");
         methodChannel.setMethodCallHandler(this);
 
         meetingStatusChannel = new EventChannel(messenger, "com.decodedhealth/zoom_event_stream");

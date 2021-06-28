@@ -23,23 +23,23 @@ iOS: https://github.com/zoom/zoom-sdk-ios/releases/tag/v4.6.21666.0428
 
 ## Installation
 
-First, add `flutter_zoom_plugin` as a [dependency in your pubspec.yaml file](https://flutter.io/using-packages/).
+First, add `flutter_zoom_plugin_ios` as a [dependency in your pubspec.yaml file](https://flutter.io/using-packages/).
 
 Use the git tags for deployments as milestones as the main branch is considered active development.
 
 ```yaml
-  flutter_zoom_plugin:
+  flutter_zoom_plugin_ios:
       git:
-        url: git://github.com/zibma/flutter_zoom_plugin.git
+        url: git://github.com/zibma/flutter_zoom_plugin_ios.git
         ref: 0.0.8
 ```
 
 Please use `main` for Apple app store build deployments.
 
 ```yaml
-  flutter_zoom_plugin:
+  flutter_zoom_plugin_ios:
       git:
-        url: git://github.com/zibma/flutter_zoom_plugin.git
+        url: git://github.com/zibma/flutter_zoom_plugin_ios.git
         ref: main
 ```
 
@@ -66,13 +66,13 @@ If you want to use the iOS Simulator to test your app, you will need to ensure y
 
 To use the Dev Zoom SDK, run the following
 ```shell script
-flutter pub run flutter_zoom_plugin:unzip_zoom_sdk dev
+flutter pub run flutter_zoom_plugin_ios:unzip_zoom_sdk dev
 ```
     
 To switch back to the normal Zoom SDK, simply run
 
 ```shell script
-flutter pub run flutter_zoom_plugin:unzip_zoom_sdk
+flutter pub run flutter_zoom_plugin_ios:unzip_zoom_sdk
 ```
 
 ### Android

@@ -1,6 +1,6 @@
-# flutter_zoom_plugin_example
+# flutter_zoom_plugin_ios_example
 
-Demonstrates how to use the flutter_zoom_plugin plugin.
+Demonstrates how to use the flutter_zoom_plugin_ios plugin.
 
 ## Getting Started
 

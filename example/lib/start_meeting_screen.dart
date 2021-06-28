@@ -2,8 +2,8 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_zoom_plugin/zoom_options.dart';
-import 'package:flutter_zoom_plugin/zoom_view.dart';
+import 'package:flutter_zoom_plugin_ios/zoom_options.dart';
+import 'package:flutter_zoom_plugin_ios/zoom_view.dart';
 
 class StartMeetingWidget extends StatelessWidget {
   ZoomOptions? zoomOptions;
@@ -15,7 +15,7 @@ class StartMeetingWidget extends StatelessWidget {
   String SDKSecret = 'qmo84JZAg24dguzikPZX49QwajdhpxBiYtu3';
   String Username = 'viren@zibma.com';
   String zoomAccessToken_ZAK =
-      'eyJ6bV9za20iOiJ6bV9vMm0iLCJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6ImFfTlVXQkxOU1g2UFQ5TUZuZUFhWHciLCJpc3MiOiJ3ZWIiLCJzdHkiOjEwMCwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJjS0ZRVThkWkRkWmR4TnpvRjlHRWVJYW1vYVdnN3dEd2IwUkZFektsU0wwLkJnWVljR3hHVGpscFJuZDFORFJKYUN0VWNHUjJlVkJLVVQwOVFEWTNOR1V5WldRMU5tWXlOemsxT1dVeVptWmtZams0WldabFlUaGpPREk0T0RVeE1tRXdZekE0TlRjM05ERTJPRFF5TWpjME1qQXlZakl4WWpoaU1Ua0FJRVZPTkhWM1ZUWXliWEZZU0d4aWVFUlVPVU4yT1hOcGVuVnpMemMzYlV0b0FBTmhkekVBQUFGNkhrdjJwQUFTZFFBQUFBIiwiZXhwIjoxNjI0MDEzMTMyLCJpYXQiOjE2MjQwMDU5MzIsImFpZCI6Ik40X1B0Vm1WVGhhQnVNS3g4UVVkTHciLCJjaWQiOiIifQ.Dk-Xax5M3AQ7WSo6eLiNaRcdhPqxvr9FecKw76BiatY';
+      'eyJ0eXAiOiJKV1QiLCJzdiI6IjAwMDAwMSIsInptX3NrbSI6InptX28ybSIsImFsZyI6IkhTMjU2In0.eyJhdWQiOiJjbGllbnRzbSIsInVpZCI6ImFfTlVXQkxOU1g2UFQ5TUZuZUFhWHciLCJpc3MiOiJ3ZWIiLCJzdHkiOjEwMCwid2NkIjoiYXcxIiwiY2x0IjowLCJzdGsiOiJNVVVYQzVuNzE2ajNydFAzQjhINFlZRURXcks1OUpGNnNvZERWMWJQdDFrLkJnWVljR3hHVGpscFJuZDFORFJKYUN0VWNHUjJlVkJLVVQwOVFEWTNOR1V5WldRMU5tWXlOemsxT1dVeVptWmtZams0WldabFlUaGpPREk0T0RVeE1tRXdZekE0TlRjM05ERTJPRFF5TWpjME1qQXlZakl4WWpoaU1Ua0FJRVZPTkhWM1ZUWXliWEZZU0d4aWVFUlVPVU4yT1hOcGVuVnpMemMzYlV0b0FBTmhkekVBQUFGNkxoUDdWQUFTZFFBQUFBIiwiZXhwIjoxNjI0Mjc3ODk5LCJpYXQiOjE2MjQyNzA2OTksImFpZCI6Ik40X1B0Vm1WVGhhQnVNS3g4UVVkTHciLCJjaWQiOiIifQ.I9gZbqxlTNxXSrQXrBXKB_6-OpZExa6GQt1dwjUA8uk';
   String displayName = 'Android';
 
   StartMeetingWidget({Key? key, meetingId}) : super(key: key) {
@@ -40,10 +40,6 @@ class StartMeetingWidget extends StatelessWidget {
       noMore: "false",
       noTitle: "false",
       noParticipant: "false",
-
-
-
-
     );
   }
 

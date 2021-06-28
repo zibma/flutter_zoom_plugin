@@ -1,4 +1,4 @@
-package com.decodedhealth.flutter_zoom_plugin;
+package com.decodedhealth.flutter_zoom_plugin_ios;
 
 import java.util.Arrays;
 import java.util.List;
