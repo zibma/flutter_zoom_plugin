@@ -46,7 +46,7 @@
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9DFBC7FF232F59E8009F757B /* MobileRTCScreenShare.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileRTCScreenShare.framework; path = ../../ios/MobileRTCScreenShare.framework; sourceTree = "<group>"; };
-		9DFBC800232F59E8009F757B /* MobileRTC.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileRTC.framework; path = ../../ios/MobileRTC.framework; sourceTree = "<group>"; };
+		9DFBC800232F59E8009F757B /* MobileRTC1.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileRTC1.framework; path = ../../ios/MobileRTC1.framework; sourceTree = "<group>"; };
 		9DFBC801232F59E8009F757B /* MobileRTCResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = MobileRTCResources.bundle; path = ../../ios/MobileRTCResources.bundle; sourceTree = "<group>"; };
 		E20DACF650BE252C2D77ABFF /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
 		E3F79BD9B910588911C01540 /* Pods-Runner.profile.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.profile.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.profile.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		79FDEC3B3F6E3396BC208BF2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9DFBC800232F59E8009F757B /* MobileRTC.framework */,
+				9DFBC800232F59E8009F757B /* MobileRTC1.framework */,
 				9DFBC801232F59E8009F757B /* MobileRTCResources.bundle */,
 				9DFBC7FF232F59E8009F757B /* MobileRTCScreenShare.framework */,
 				FDDF5BCC741DEEDA0B482628 /* Pods_Runner.framework */,
