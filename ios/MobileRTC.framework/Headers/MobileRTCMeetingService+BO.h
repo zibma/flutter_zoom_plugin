@@ -2,7 +2,7 @@
 //  MobileRTCMeetingService+BO.h
 //  MobileRTC
 //
-//  Created by Jackie Chen on 2020/2/11.
+//  Created by Zoom Video Communications on 2020/2/11.
 //  Copyright © 2020 Zoom Video Communications, Inc. All rights reserved.
 //
 
@@ -56,6 +56,12 @@
 @brief is in bo meeting right now.
 */
 - (BOOL)isInBOMeeting;
+
+/*!
+@brief Get current BO status
+@return The return value is a enum for bo status.
+*/
+- (MobileRTCBOStatus)getBOStatus;
 
 @end
 

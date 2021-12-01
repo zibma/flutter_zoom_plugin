@@ -40,7 +40,7 @@ public class AuthenticationDelegate: NSObject, MobileRTCAuthDelegate {
     
     public func onMobileRTCAuthReturn(_ returnValue: MobileRTCAuthError) {
 
-        if returnValue == MobileRTCAuthError_Success {
+        if returnValue == MobileRTCAuthError.success {
             self.result?([0, 0])
         } else {
             self.result?([1, 0])
@@ -308,7 +308,7 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
 
             let user: MobileRTCMeetingStartParam4WithoutLoginUser = MobileRTCMeetingStartParam4WithoutLoginUser.init()
             
-            user.userType = MobileRTCUserType_APIUser
+            user.userType = MobileRTCUserType.apiUser
             user.meetingNumber = arguments["meetingId"]!!
             user.userName = arguments["displayName"]!!
             user.userToken = arguments["zoomToken"]!!
@@ -401,30 +401,30 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
         return nil
     }
     
-    private func getStateMessage(_ state: MobileRTCMeetingState?) -> [String] {
-        
-        var message: [String]
-        
-        switch state {
-        case MobileRTCMeetingState_Idle:
-            message = ["MEETING_STATUS_IDLE", "No meeting is running"]
-            break
-        case MobileRTCMeetingState_Connecting:
-            message = ["MEETING_STATUS_CONNECTING", "Connect to the meeting server"]
-            break
-        case MobileRTCMeetingState_InMeeting:
-            message = ["MEETING_STATUS_INMEETING", "Meeting is ready and in process"]
-            break
-        case MobileRTCMeetingState_WebinarPromote:
-            message = ["MEETING_STATUS_WEBINAR_PROMOTE", "Upgrade the attendees to panelist in webinar"]
-            break
-        case MobileRTCMeetingState_WebinarDePromote:
-            message = ["MEETING_STATUS_WEBINAR_DEPROMOTE", "Demote the attendees from the panelist"]
-            break
-        default:
-            message = ["MEETING_STATUS_UNKNOWN", "Unknown error"]
-        }
-        
+    private func getStateMessage(_ state: MobileRTCMeetingState?) -> String {
+        let message = ""
+//        var message: [String]
+//
+//        switch state {
+//        case MobileRTCMeetingState_Idle:
+//            message = ["MEETING_STATUS_IDLE", "No meeting is running"]
+//            break
+//        case MobileRTCMeetingState_Connecting:
+//            message = ["MEETING_STATUS_CONNECTING", "Connect to the meeting server"]
+//            break
+//        case MobileRTCMeetingState_InMeeting:
+//            message = ["MEETING_STATUS_INMEETING", "Meeting is ready and in process"]
+//            break
+//        case MobileRTCMeetingState_WebinarPromote:
+//            message = ["MEETING_STATUS_WEBINAR_PROMOTE", "Upgrade the attendees to panelist in webinar"]
+//            break
+//        case MobileRTCMeetingState_WebinarDePromote:
+//            message = ["MEETING_STATUS_WEBINAR_DEPROMOTE", "Demote the attendees from the panelist"]
+//            break
+//        default:
+//            message = ["MEETING_STATUS_UNKNOWN", "Unknown error"]
+//        }
+//
         return message
     }
     

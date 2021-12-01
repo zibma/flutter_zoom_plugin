@@ -2,16 +2,15 @@
 //  MobileRTCMeetingService.h
 //  MobileRTC
 //
-//  Created by Robust Hu on 8/7/14.
+//  Created by Zoom Video Communications on 8/7/14.
 //  Copyright (c) 2019 Zoom Video Communications, Inc. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "MobileRTCConstants.h"
 #import "MobileRTCMeetingDelegate.h"
-
 /**
- * The key of dictionary of parameters for the methods "startMeetingWithDictionary" and "joinMeetingWithDictionary". 
+ * The key of dictionary of parameters for the methods "startMeetingWithDictionary" and "joinMeetingWithDictionary".
  *
  * @key kMeetingParam_UserID The ID of user who starts meeting.
  * @key kMeetingParam_UserToken The token for starting meeting.
@@ -21,10 +20,10 @@
  * @key kMeetingParam_MeetingPassword The password of meeting to join.
  * @key kMeetingParam_ParticipantID The key is optional.
  * @key kMeetingParam_IsAppShare The key is optional, user will start meeting to share App if it is set to @(YES).
- * @key kMeetingParam_WebinarToken The key is optional to join a Webinar, it will be called if user wants to join the webinar as a panelist. 
+ * @key kMeetingParam_WebinarToken The key is optional to join a Webinar, it will be called if user wants to join the webinar as a panelist.
  * @key kMeetingParam_NoAudio The key is optional, user will join meeting without audio if it is set to @(YES).
  * @key kMeetingParam_NoVideo The key is optional, user will join meeting without video if it is set to @(YES).
- * @key kMeetingParam_VanityID Meeting vanity ID, what is personal link name. 
+ * @key kMeetingParam_VanityID Meeting vanity ID, what is personal link name.
 */
 extern NSString* _Nonnull kMeetingParam_UserID;
 extern NSString* _Nonnull kMeetingParam_UserToken;
@@ -41,18 +40,18 @@ extern NSString* _Nonnull kMeetingParam_VanityID;
 
 /*!
  @brief The method provides parameters for starting meeting.
- */ 
+ */
 @interface MobileRTCMeetingStartParam : NSObject
 /*!
- @brief Notify if it is an App share meeting. 
+ @brief Notify if it is an App share meeting.
  */
 @property (nonatomic, assign, readwrite) BOOL  isAppShare;
 /*!
- @brief Start meeting without audio. 
+ @brief Start meeting without audio.
  */
 @property (nonatomic, assign, readwrite) BOOL  noAudio;
 /*!
- @brief Start meeting without video  
+ @brief Start meeting without video
  */
 @property (nonatomic, assign, readwrite) BOOL  noVideo;
 /*!
@@ -112,34 +111,34 @@ extern NSString* _Nonnull kMeetingParam_VanityID;
 /*!
  @class MobileRTCMeetingService
  @brief The method is an implementation for client to start/join a meeting.
- @warning The meeting service allows only one concurrent operation at a time, which means, only one API call is in progress at any given time.  
+ @warning The meeting service allows only one concurrent operation at a time, which means, only one API call is in progress at any given time.
  */
 @interface MobileRTCMeetingService : NSObject
 
 /*!
- @brief Callback of receiving meeting events.  
+ @brief Callback of receiving meeting events.
  */
 @property (nullable, assign, nonatomic) id<MobileRTCMeetingServiceDelegate> delegate;
 
 /*!
- @brief Callback of receiving meeting events for custom UI. 
+ @brief Callback of receiving meeting events for custom UI.
  */
 @property (nullable, assign, nonatomic) id<MobileRTCCustomizedUIMeetingDelegate> customizedUImeetingDelegate;
 
 /*!
- @brief Start a meeting with parameters in the dictionary. 
+ @brief Start a meeting with parameters in the dictionary.
  @warning If the user type is MobileRTCUserType_APIUser, the parameters in dictionary should cover kMeetingParam_UserID, kMeetingParam_UserToken, kMeetingParam_UserType, kMeetingParam_Username, kMeetingParam_MeetingNumber; if the user type is MobileRTCUserType_ZoomUser/MobileRTCUserType_SSOUser, the parameters in dictionary should cover kMeetingParam_UserType and kMeetingParam_MeetingNumber(optional, it will be an instant meeting if user did not fill the meeting number).
  @param dict The dictionary contains the meeting parameters.
- @return The state of the meeting, started or failed. 
+ @return The state of the meeting, started or failed.
  @warning If you start a meeting with wrong parameters, it will return MobileRTCMeetError_InvalidArguments.
- */  
+ */
 - (MobileRTCMeetError)startMeetingWithDictionary:(nonnull NSDictionary*)dict;
 
 /*!
  @brief Start a meeting with MobileRTCMeetingStartParam parameter.
  @warning For non-logged-in user, create an instance via MobileRTCMeetingStartParam4WithoutLoginUser to pass the parameters. For logged-in user, create an instance via MobileRTCMeetingStartParam4LoginlUser to pass the parameters.
  @param param Create an instance with right information via MobileRTCMeetingStartParam.
- @return The state of the meeting, started or failed. 
+ @return The state of the meeting, started or failed.
  @warning If you start a meeting with wrong parameters, it will return MobileRTCMeetError_InvalidArguments.
  */
 - (MobileRTCMeetError)startMeetingWithStartParam:(nonnull MobileRTCMeetingStartParam*)param;
@@ -147,8 +146,8 @@ extern NSString* _Nonnull kMeetingParam_VanityID;
 /*!
  @brief Use it to join a meeting with parameters in a dictionary.
  @param dict The dictionary which contains the meeting parameters.
- @return The state of the meeting, started or failed. 
- @warning If app is in callkit mode, set parameter:kMeetingParam_Username to empty. CallKit lets you integrate your calling services with other call-related apps on the system. 
+ @return The state of the meeting, started or failed.
+ @warning If app is in callkit mode, set parameter:kMeetingParam_Username to empty. CallKit lets you integrate your calling services with other call-related apps on the system.
  */
 - (MobileRTCMeetError)joinMeetingWithDictionary:(nonnull NSDictionary*)dict;
 
@@ -160,13 +159,13 @@ extern NSString* _Nonnull kMeetingParam_VanityID;
 - (MobileRTCMeetError)handZoomWebUrl:(nonnull NSString*)meetingUrl;
 
 /*!
- @brief Get the current meeting state.   
+ @brief Get the current meeting state.
  @return Current meeting state.
  */
 - (MobileRTCMeetingState)getMeetingState;
 
 /*!
- @brief End/Leave the current meeting. 
+ @brief End/Leave the current meeting.
  @param cmd The command for leaving the current meeting. Only host can end the meeting.
  */
 - (void)leaveMeetingWithCmd:(LeaveMeetingCmd)cmd;
