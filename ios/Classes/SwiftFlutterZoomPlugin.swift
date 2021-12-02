@@ -264,29 +264,18 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
             meetingSettings?.meetingParticipantHidden = parseBoolean(data: arguments["noParticipant"]!, defaultValue: false)
             meetingSettings?.meetingMoreHidden = parseBoolean(data: arguments["noMore"]!, defaultValue: false)
 			meetingSettings?.meetingPasswordHidden = true
+
+            var params = [
+                kMeetingParam_Username: arguments["userId"]!!,
+                kMeetingParam_MeetingNumber: arguments["meetingId"]!!
+            ]
             
-            let user: MobileRTCMeetingJoinParam = MobileRTCMeetingJoinParam.init()
-            
-            user.meetingNumber = arguments["meetingId"]!!
-            user.userName = arguments["userId"]!!
-            //user.userToken = arguments["zoomToken"]!!
             let hasPassword = arguments["meetingPassword"]! != nil
             if hasPassword {
-                user.password = arguments["meetingPassword"]!!
+                params[kMeetingParam_MeetingPassword] = arguments["meetingPassword"]!!
             }
-        
-//            var params = [
-//                "kMeetingParam_Username": arguments["userId"]!!,
-//                "kMeetingParam_MeetingNumber": arguments["meetingId"]!!
-//            ]
-//
-//            let hasPassword = arguments["meetingPassword"]! != nil
-//            if hasPassword {
-//                params["kMeetingParam_MeetingPassword"] = arguments["meetingPassword"]!!
-//            }
-//            let param: MobileRTCMeetingJoinParam = user
-            meetingService?.delegate = self
-            let response = meetingService?.joinMeeting(with: user)
+            
+            let response = meetingService?.joinMeeting(with: params)
             
             if let response = response {
                 print("Got response from join: \(response)")
