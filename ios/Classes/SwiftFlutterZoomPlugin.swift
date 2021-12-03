@@ -315,6 +315,7 @@ public class ZoomView: NSObject, FlutterPlatformView, MobileRTCMeetingServiceDel
             meetingSettings?.meetingParticipantHidden = parseBoolean(data: arguments["noParticipant"]!, defaultValue: false)
             meetingSettings?.meetingMoreHidden = parseBoolean(data: arguments["noMore"]!, defaultValue: false)
 			meetingSettings?.meetingPasswordHidden = true
+			meetingSettings?.meetingInviteUrlHidden = true
 
             let user: MobileRTCMeetingStartParam4WithoutLoginUser = MobileRTCMeetingStartParam4WithoutLoginUser.init()
             
