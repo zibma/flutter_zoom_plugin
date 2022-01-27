@@ -36,6 +36,7 @@ android {
         applicationId "com.decodedhealth.flutter_zoom_plugin_example"
         minSdkVersion 21
         targetSdkVersion 30
+        multiDexEnabled true
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
