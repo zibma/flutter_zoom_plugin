@@ -51,7 +51,7 @@ dependencies {
 //    implementation 'com.google.android.exoplayer:exoplayer-ui:2.12.3'
 //    implementation 'com.google.android.exoplayer:exoplayer-core:2.16.1'
 //    implementation 'com.google.android.exoplayer:exoplayer-ui:2.16.1'
-    implementation 'com.google.android.exoplayer:exoplayer:2.14.0'
+   // implementation 'com.google.android.exoplayer:exoplayer:2.14.0'
    // implementation 'androidx.swiperefreshlayout:swiperefreshlayout:1.0.0'
     implementation 'com.google.code.gson:gson:2.8.9'
     //implementation 'com.google.android:flexbox:2.0.1'
