@@ -9,7 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  archive: ^2.0.13-nullsafety.0
+#  archive: ^3.0.0
 
 dev_dependencies:
   flutter_test:
