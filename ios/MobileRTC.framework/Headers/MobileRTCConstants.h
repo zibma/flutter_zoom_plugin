@@ -64,6 +64,10 @@ typedef NS_ENUM(NSUInteger, MobileRTCLoginFailReason) {
     MobileRTCLoginFailReason_LoginTokenInvalid,
     /// User disagree login Disclaimer
     MobileRTCLoginFailReason_UserDisagreeLoginDisclaimer,
+    /// Need MFA auth
+    MobileRTCLoginFailReason_MFARequired,
+    /// Need confirm birthday
+    MobileRTCLoginFailReason_NeedBirthdayAsk,
     ///Login fail other reason.
     MobileRTCLoginFailReason_OtherIssue = 100,
 };
@@ -960,3 +964,32 @@ typedef NS_ENUM(NSUInteger, MobileRTCANNError) {
     /// ANN feature not support
     MobileRTCANNError_FeatureNotSupport                = 3,
 };
+
+/*!
+ @brief Live transcription status.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCLiveTranscriptionStatus) {
+    /// Live transcription not start.
+    MobileRTC_LiveTranscription_Status_Unknown                  = 0,
+    /// Live transcription not start.
+    MobileRTC_LiveTranscription_Status_Stop                     = 1,
+    /// Live transcription start.
+    MobileRTC_LiveTranscription_Status_Start                    = 2,
+    /// Live transcription connecting.
+    MobileRTC_LiveTranscription_Status_Connecting               = 3,
+};
+
+/*!
+ @brief Live transcription operation type.
+ */
+typedef NS_ENUM(NSUInteger, MobileRTCLiveTranscriptionOperationType) {
+    /// Live transcription operation type is none, means no operate.
+    MobileRTC_LiveTranscription_OperationType_None              = 0,
+    /// Live transcription operation type is add, means a new live transcription item is arrive.
+    MobileRTC_LiveTranscription_OperationType_Add               = 1,
+    /// Live transcription operation type is update, means an existed live transcription item has been updated.
+    MobileRTC_LiveTranscription_OperationType_Update            = 2,
+    /// Live transcription operation type is delete, means an existed live transcription item has been deleted.
+    MobileRTC_LiveTranscription_OperationType_Delete            = 3,
+};
+

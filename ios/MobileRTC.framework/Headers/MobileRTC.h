@@ -22,6 +22,7 @@
 #import <MobileRTC/MobileRTCMeetingService+Interpretation.h>
 #import <MobileRTC/MobileRTCMeetingService+BO.h>
 #import <MobileRTC/MobileRTCMeetingService+Reaction.h>
+#import <MobileRTC/MobileRTCMeetingService+LiveTranscription.h>
 #import <MobileRTC/MobileRTCMeetingSettings.h>
 #import <MobileRTC/MobileRTCInviteHelper.h>
 #import <MobileRTC/MobileRTCRoomDevice.h>
@@ -214,6 +215,12 @@
 - (MobileRTCDirectShareService * _Nullable)getDirectShareService;
 
 /*!
+@brief Get the video source helper.@see MobileRTCVideoSourceHelper
+@return The object of MobileRTCVideoSourceHelper.
+*/
+- (MobileRTCVideoSourceHelper * _Nullable)getVideoSourceHelper;
+
+/*!
  @brief Get the languages supported by MobileRTC.   
  @warning The languages supported by MobileRTC are English, German, Spanish, Japanese, French, Simplified Chinese, Traditional Chinese.
  @return An array of languages supported by MobileRTC.
@@ -274,11 +281,5 @@
  @warning It is necessary to call the method after auth success.
  */
 - (BOOL)hasRawDataLicense;
-
-/*!
-@brief Get the video source helper.@see MobileRTCVideoSourceHelper
-@return The object of MobileRTCVideoSourceHelper.
-*/
-- (MobileRTCVideoSourceHelper * _Nullable)getVideoSourceHelper;
 
 @end
