@@ -84,6 +84,12 @@
  */
 - (void)turnOnCMR:(BOOL)on;
 
+/*!
+ @brief Get current cloud recording.
+ @return return If the function succeeds, the return value is recording status.
+ */
+- (MobileRTCRecordingStatus)getCloudRecordingStatus;
+
 #pragma mark Meeting Info Related
 /*!
  @brief Query if the meeting is failover.

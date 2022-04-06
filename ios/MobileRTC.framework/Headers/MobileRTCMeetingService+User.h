@@ -36,6 +36,7 @@
  @brief Get user information in the meeting.
  @param userId In-meeting user ID.
  @return User information.
+ @warning webinar attendee can not call the function, please use: [attendeeInfoByID:].
  */
 - (nullable MobileRTCMeetingUserInfo*)userInfoByID:(NSUInteger)userId;
 
@@ -43,7 +44,8 @@
  @brief Get attendees' information in the webinar.
  @param userId attendee's ID in meeting.
  @return attendee info, a MobileRTCMeetingWebinarAttendeeInfo object.
- @warning Only webinar meeting host/co-host/panelist can run the function.
+ @warning webinar meeting host/co-host/panelist can get other attendee info.
+ @warning webinar attendee can only get their own attendee info.
  */
 - (nullable MobileRTCMeetingWebinarAttendeeInfo*)attendeeInfoByID:(NSUInteger)userId;
 
@@ -124,16 +126,23 @@
 
 /*!
  @brief Set to put all users' hands down.
+ @param isWebinarAttendee YES indicates to lower all hands for webinar attendee. 
  @return YES means that the method is called successfully, otherwise not.
  @@warning Only meeting host/cohost can run the function when in meeting.
  */
-- (BOOL)lowerAllHand;
+- (BOOL)lowerAllHand:(BOOL)isWebinarAttendee;
 
 /*!
  @brief Query if the current user can claim to be a host
  @return YES means that the current user can claim to be a host, otherwise not.
  */
 - (BOOL)canClaimhost;
+
+/*!
+ @brief Reclaim the role of the host.
+ @return YES means that the current user can claim to be a host, otherwise not.
+ */
+- (BOOL)reclaimHost;
 
 /*!
  @brief Set to claim to be a host by host key.
